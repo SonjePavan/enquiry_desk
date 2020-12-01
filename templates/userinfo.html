@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	
+	*{
+		margin:0;
+		padding: 0; 
+		background-color: #00FA9A;
+	}
+.header {
+  padding: 60px;
+  text-align: center;
+  background:transparent;
+  color:black;
+  font-size: 25px;
+}	
+
+.box{
+
+	   		width:1000px; 
+            height:1000px; 
+            position: fixed; 
+            top: 50%; 
+            left: 50%; 
+            margin-top: -120px; 
+            margin-left: -180px; 
+
+}
+
+form.box input {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 30%;
+  background-color:transparent;
+  border-radius: 10px;
+  outline:none; 
+  text-transform: capitalize;
+
+}
+
+#course_name{
+	padding: 10px;
+ 	 font-size: 17px;
+  	border: 1px solid grey;
+  	float: left;
+ 	width: 32.5%;
+  	background:transparent;
+ 	border-radius: 10px;
+  	outline:none; 
+
+}
+
+
+.box button{
+  display: inline-block;
+  padding: 10px;
+  font-size: 17px;
+  margin-left: 70px;
+  border: 1px solid grey;
+  width:15%;
+  background:#00FFFF;
+  outline-color: skyblue;
+  border-radius: 30px;
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+</style>
+
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="header">
+  <h1>Welcome To Enquiry Desk</h1>
+ 
+</div>
+
+<form class="box" action="store" method="post">
+	{% csrf_token %}
+	<input type="text" name="fname" placeholder="Enter First Name"> <br><br><br>
+	<input type="text" name="lname" placeholder="Enter Last Name"> <br><br><br>
+	<input type="email" name="email" placeholder="Enter Email Address"> <br><br><br>
+	<input type="Number" name="mobile" placeholder="Enter Mobile Number"> <br><br><br>
+	<input type="text" name="add" placeholder="Enter Address"> <br><br><br>
+	<select name="course" id="course_name">
+	<option value="Select">Select Course Name</option>	
+    <option value="Python">Python</option>
+    <option value="Java">Java</option>
+    <option value=".Net">.Net</option>
+    <option value="Php">Php</option>
+  </select>
+  <br><br><br>
+
+	<button>Submit</button>
+
+</form>	
+
+</html>
