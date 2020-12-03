@@ -9,7 +9,8 @@ class StudentData(models.Model):
     mobile_number = models.IntegerField()
     address = models.TextField(max_length=200)
     course=models.TextField(max_length=100)
-    extra=models.TextField(max_length=50)
+    timendate=models.TextField(max_length=100)
+    extra=models.TextField(max_length=10)
 
     def __str__(self):
         return self.firstname
